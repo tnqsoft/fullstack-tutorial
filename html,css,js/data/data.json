@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "figure": "a-1.jpg",
+    "title": "Article 1",
+    "content": "Content 1"
+  },
+  {
+    "id": 2,
+    "figure": "a-2.jpg",
+    "title": "Article 2",
+    "content": "Content 2"
+  }
+]
