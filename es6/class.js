@@ -46,6 +46,6 @@ class Person {
 
 var person1 = new Person("Nguyen Nhu Tuan");
 console.log(person1.getName());
-//console.log(person1.name);
+console.log(person1.#name);
 //console.log(person1.#sayHello());
 Person.demo();

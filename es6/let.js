@@ -7,11 +7,18 @@ function test1() {
 test1();
 //------------------------------------------
 let v2="2.1";
-function test2() {
-    //let v2="2.2";
-    console.log(v2);
-}
-test2();
+// switch (true) {
+//     case false:
+//         let v2 = 1;
+//         break;
+//     default:
+//         break;
+// }
+// function test2() {
+//     let v2="2.2";
+//     console.log(v2);
+// }
+// test2();
 //------------------------------------------
 {
     let v3="3.1";
