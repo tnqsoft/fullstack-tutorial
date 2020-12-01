@@ -29,8 +29,6 @@ use Symfony\Component\Serializer\Annotation\MaxDepth;
  *              "status"=200
  *          }
  *     },
- *     normalizationContext={"groups"={"read"}},
- *     denormalizationContext={"groups"={"write"}}
  * )
  * @ORM\Entity(repositoryClass=TodoRepository::class)
  */
@@ -40,7 +38,6 @@ class Todo
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"read"})
      */
     private $id;
 

@@ -52,7 +52,6 @@ class Category
 
     /**
      * @ORM\OneToMany(targetEntity=Todo::class, mappedBy="category")
-     * @Groups({"none"})
      */
     private $todos;
 

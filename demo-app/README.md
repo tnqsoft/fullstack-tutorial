@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+-----------------------
+https://scotch.io/tutorials/reference-angular-imports-absolutely-for-easier-development
+
+https://ng-bootstrap.github.io/#/getting-started
+
+https://bezkoder.com/angular-10-jwt-auth/
+https://jasonwatmore.com/post/2020/07/09/angular-10-jwt-authentication-example-tutorial
+https://jasonwatmore.com/post/2020/07/25/angular-10-jwt-authentication-with-refresh-tokens
+https://github.com/cornflourblue/angular-10-jwt-authentication-example
+
