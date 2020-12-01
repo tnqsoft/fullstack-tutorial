@@ -27,7 +27,6 @@ export class AuthenticationService {
   login(email: string, password: string) {
     return this.http.post<any>(`${environment.apiUrl}login_check`, { email, password })
       .pipe(map(res => {
-        console.log(res);
         // store user details and jwt token in local storage to keep user logged in between page refreshes
         const user: User = this.getUserFromToken(res.token);
         localStorage.setItem('token', res.token);
@@ -50,7 +49,7 @@ export class AuthenticationService {
       if (moment.unix(decoded.exp).toDate() < moment().toDate()) {
         return null;
       }
-      return new User(decoded.userId, decoded.username, localStorage.getItem('token'));
+      return new User(decoded.userId, decoded.username, token);
     }
     return null;
   }
