@@ -1,0 +1,31 @@
+api_platform:
+    title: 'Demo API'
+    description: 'API demo for Angular 10 Training'
+    version: 1.0.0,
+    enable_profiler: false
+    enable_nelmio_api_doc: true
+    allow_plain_identifiers: true
+    eager_loading:
+        force_eager: false
+    mapping:
+        paths:
+            - '%kernel.project_dir%/src/Entity'
+    patch_formats:
+        json: ['application/merge-patch+json']
+    swagger:
+        versions: [3]
+        api_keys:
+            Bearer:
+                name: Authorization
+                type: header
+    graphql:
+        graphiql:
+            enabled: true
+    formats:
+        json:
+            mime_types:
+                - application/json
+        html:
+            mime_types:
+                - text/html
+

@@ -20,3 +20,25 @@ symfony serve
 bin/console app:create-user
 
 symfony serve --allow-http
+
+composer require api-platform/core:dev-master
+https://api-platform.com/docs/core/dto/
+https://symfonycasts.com/screencast/api-platform/swagger#play
+
+/**
+ * @ApiResource(itemOperations={},collectionOperations={
+ *     "post_login"={
+ *         "method" = "POST",
+ *         "path"="/api/login_check",
+ *         "route_name"="api.security.login",
+ *         "controller"=SecurityController::class,
+ *         "output"=LoginOutput::class,
+ *         "status"=200
+ *     }}
+ * )
+ */
+ 
+ https://api-platform.com/docs/core/content-negotiation/
+ https://github.com/api-platform/api-platform/issues/199
+ https://github.com/api-platform/api-platform/issues/1202
+ https://api-platform.com/docs/core/serialization/#using-serialization-groups
