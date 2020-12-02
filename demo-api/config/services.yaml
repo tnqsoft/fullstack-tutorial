@@ -38,3 +38,8 @@ services:
         tags:
             - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_created, method: onJWTCreated }
             - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_decoded, method: onJWTDecoded }
+
+    App\Serializer\TodoNormalizer:
+        arguments: [ '@security.token_storage' ]
+        tags:
+            - { name: 'serializer.normalizer', priority: 64 }

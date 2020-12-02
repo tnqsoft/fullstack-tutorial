@@ -21,7 +21,7 @@ export class CategoryListComponent implements OnInit {
   }
 
   getCategories(): void {
-    this.todoService.getCategory().subscribe((response: Category[]) => {
+    this.todoService.getCategories().subscribe((response: Category[]) => {
       this.categories = response;
     });
   }

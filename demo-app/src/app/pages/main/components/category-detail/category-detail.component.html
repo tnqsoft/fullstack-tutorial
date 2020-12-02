@@ -1,1 +1,6 @@
-<p>category-detail works!</p>
+<div class="card">
+  <div class="card-header">{{ category?.title }}</div>
+  <div class="card-body">
+    <router-outlet *ngIf="category"></router-outlet>
+  </div>
+</div>

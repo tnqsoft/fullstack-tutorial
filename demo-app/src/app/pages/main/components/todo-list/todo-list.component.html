@@ -1,0 +1,13 @@
+<div class="form-check" *ngFor="let todo of todoList; index as i; first as isFirst">
+  <input
+    type="checkbox"
+    class="form-check-input"
+    [id]="'todo' + todo.id"
+    [value]="todo.id"
+    [checked]="todo.isDone"
+    [disabled]="todo.isDone"
+    (change)="resolveTodo(todo)"
+  >
+  <label class="form-check-label" for="{{ 'todo' + todo.id }}">{{ todo.detail }}</label>
+</div>
+<a class="btn btn-primary" [routerLink]="['/category', category.id, 'todo', 'add']">Add</a>

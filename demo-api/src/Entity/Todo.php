@@ -5,30 +5,64 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Annotation\ApiSubresource;
+use App\Controller\CategoryController;
 use App\Repository\TodoRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\Annotation\MaxDepth;
+use App\DTO\ResolveTodoInput;
+use App\DTO\AddTodoInput;
 
 /**
  * @ApiResource(itemOperations={
- *          "get"={
+ *          "get_by_category"={
  *              "method"="GET",
- *              "path"="/todos/{id}"
+ *              "path"="/categories/{id}/todo",
+ *              "requirements"={"id"="\d+"},
+ *              "controller"=CategoryController::class
  *          },
- *           "put"={
+ *          "resolve_todo"={
  *              "method"="PUT",
- *              "path"="/todos/{id}"
- *          }
+ *              "path"="/categories/{id}/todo/{todoId}",
+ *              "controller"=CategoryController::class,
+ *              "input"=ResolveTodoInput::class,
+ *              "openapi_context" = {
+ *                  "summary" = "Resolve Todo",
+ *                  "parameters"={
+ *                      {
+ *                          "name" = "id",
+ *                          "in" = "path",
+ *                          "required" = "true",
+ *                          "type" = "number"
+ *                      },
+ *                      {
+ *                          "name" = "todoId",
+ *                          "in" = "path",
+ *                          "required" = "true",
+ *                          "type" = "number"
+ *                      }
+ *                  }
+ *              }
+ *          },
+ *          "add_todo"={
+ *              "method"="POST",
+ *              "path"="/categories/{id}/todo",
+ *              "controller"=CategoryController::class,
+ *              "input"=AddTodoInput::class,
+ *              "openapi_context" = {
+ *                  "summary" = "Add Todo",
+ *                  "parameters"={
+ *                      {
+ *                          "name" = "id",
+ *                          "in" = "path",
+ *                          "required" = "true",
+ *                          "type" = "number"
+ *                      }
+ *                  }
+ *              }
+ *          },
  *     },
- *     collectionOperations={
- *          "get",
- *          "post"={
- *              "method" = "POST",
- *              "path"="/todos",
- *              "status"=200
- *          }
- *     },
+ *     collectionOperations={},
  * )
  * @ORM\Entity(repositoryClass=TodoRepository::class)
  */

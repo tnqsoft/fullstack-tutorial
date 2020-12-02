@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Category;
 use App\Entity\Todo;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -17,6 +18,18 @@ class TodoRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Todo::class);
+    }
+
+    public function findAllByCategory(Category $category)
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.category = :category')
+            ->setParameter('category', $category)
+            ->orderBy('t.id', 'ASC')
+//            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+            ;
     }
 
     // /**

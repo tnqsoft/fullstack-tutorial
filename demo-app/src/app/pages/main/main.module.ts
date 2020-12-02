@@ -8,6 +8,8 @@ import { CategoryAddComponent } from './components/category-add/category-add.com
 import { CategoryListComponent } from './components/category-list/category-list.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoAddComponent } from './components/todo-add/todo-add.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { CategoryDetailComponent } from './components/category-detail/category-d
     CategoryListComponent,
     CategoryAddComponent,
     CategoryDetailComponent,
+    TodoListComponent,
+    TodoAddComponent,
   ],
   imports: [
     CommonModule,
