@@ -9,20 +9,18 @@ import {
   faFolder
 } from '@fortawesome/free-solid-svg-icons';
 import {CommonModule} from '@angular/common';
+import { DemoPipe } from '@app/shared/pipes/demo.pipe';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DemoPipe
+  ],
   imports: [
     FontAwesomeModule,
   ],
   exports: [
-    // BrowserModule,
-    // CommonModule,
-    // ReactiveFormsModule,
-    // HttpClientModule,
-    // NgbModule,
-    // RouterModule,
     FontAwesomeModule,
+    DemoPipe,
   ]
 })
 export class SharedModule {

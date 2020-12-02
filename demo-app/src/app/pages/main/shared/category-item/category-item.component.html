@@ -1,4 +1,11 @@
-<a [routerLink]="['/category', category.id]">
+<a
+  [routerLink]="['/category', category.id]"
+  [ngClass]="{
+    'text-danger': category.priority == 'high',
+    'text-warning': category.priority == 'normal',
+    'text-secondary': category.priority == 'low'
+  }"
+>
   <fa-icon [icon]="['fas', 'folder']" size="8x"></fa-icon>
-  {{ category.title }}
+  {{ category.title | demo }}
 </a>

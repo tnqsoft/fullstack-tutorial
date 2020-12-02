@@ -11,7 +11,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { JwtInterceptor } from '@app/shared/helpers/jwt.interceptor';
 import { ErrorInterceptor } from '@app/shared/helpers/error.interceptor';
 import { MainModule } from '@app/pages/main/main.module';
-import { CustomEmailPipe } from './shared/pipes/custom-email.pipe';
 import {CommonModule} from '@angular/common';
 import {SharedModule} from '@app/shared/shared.module';
 import {RouterModule} from '@angular/router';
@@ -20,7 +19,6 @@ import {RouterModule} from '@angular/router';
   declarations: [
     AppComponent,
     LoginComponent,
-    CustomEmailPipe,
   ],
   imports: [
     BrowserModule,
