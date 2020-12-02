@@ -27,7 +27,6 @@ const routes: Routes = [
           { path: 'todo/add', component: TodoAddComponent },
         ]
       },
-      // { path: 'transfer', loadChildren: './pages/transfer/transfer.module#TransferModule' },
     ]
   }
 ];

@@ -1,6 +1,19 @@
-<div class="card">
-  <div class="card-header">{{ category?.title }}</div>
-  <div class="card-body">
-    <router-outlet *ngIf="category"></router-outlet>
+<div class="row">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            {{ category?.title }}
+          </div>
+          <div class="col text-right">
+            <a class="btn btn-sm btn-primary" [routerLink]="['/category', category.id, 'todo', 'add']">Add</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <router-outlet *ngIf="category"></router-outlet>
+      </div>
+    </div>
   </div>
 </div>

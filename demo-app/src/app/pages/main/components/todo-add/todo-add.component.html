@@ -1,24 +1,21 @@
-<div class="row">
-  <div class="col-6">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="exampleInputPassword1">Detail</label>
-        <textarea
-          type="text"
-          class="form-control"
-          id="exampleInputPassword1"
-          placeholder="Detail"
-          formControlName="detail"
-          [ngClass]="{ 'is-invalid': submitted && f.detail.errors }"
-        ></textarea>
-        <div *ngIf="submitted && f.detail.errors" class="invalid-feedback">
-          <div *ngIf="f.detail.errors.required">Detail is required</div>
-        </div>
-      </div>
-      <button class="btn btn-primary" type="submit" [disabled]="loading" >
-        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-        Submit
-      </button>
-    </form>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="exampleInputPassword1">Detail</label>
+    <textarea
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Detail"
+      formControlName="detail"
+      [ngClass]="{ 'is-invalid': submitted && f.detail.errors }"
+    ></textarea>
+    <div *ngIf="submitted && f.detail.errors" class="invalid-feedback">
+      <div *ngIf="f.detail.errors.required">Detail is required</div>
+    </div>
   </div>
-</div>
+  <a [routerLink]="['/category', category.id, 'todo', 'list']" class="btn btn-outline-secondary">Back</a> &nbsp;
+  <button class="btn btn-primary" type="submit" [disabled]="loading" >
+    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+    Submit
+  </button>
+</form>

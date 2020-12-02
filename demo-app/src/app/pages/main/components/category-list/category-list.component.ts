@@ -14,7 +14,7 @@ export class CategoryListComponent implements OnInit {
 
   constructor(
     private todoService: TodoService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getCategories();
