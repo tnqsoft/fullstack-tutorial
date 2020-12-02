@@ -17,4 +17,11 @@ export class TodoService {
       // .pipe(map(res => {
       // }));
   }
+
+  addCategory(category: Category): Observable<any> {
+    const url = `${environment.apiUrl}categories`;
+    return this.http.post<any>(url, category);
+    // .pipe(map(res => {
+    // }));
+  }
 }

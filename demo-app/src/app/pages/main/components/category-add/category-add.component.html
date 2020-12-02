@@ -1,1 +1,30 @@
-<p>category-add works!</p>
+<div class="row">
+  <div class="col-6">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="priority">Priority</label>
+        <select class="form-control" formControlName="priority" id="priority">
+          <option *ngFor="let item of priorityList" [ngValue]="item">{{item}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Title"
+          formControlName="title"
+          [ngClass]="{ 'is-invalid': submitted && f.title.errors }"
+        >
+        <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+          <div *ngIf="f.title.errors.required">Title is required</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="loading" >
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

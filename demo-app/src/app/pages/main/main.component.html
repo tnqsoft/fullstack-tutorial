@@ -8,11 +8,5 @@
 </div>
 
 <div class="container-fluid">
-  <router-outlet>
-      <ul class="row category-list">
-        <li *ngFor="let category of categories; index as i; first as isFirst" class="col-2">
-          <app-category-item [category]="category"></app-category-item>
-        </li>
-      </ul>
-  </router-outlet>
+  <router-outlet></router-outlet>
 </div>

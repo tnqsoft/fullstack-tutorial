@@ -5,15 +5,19 @@ import {MainRoutingModule} from '@app/pages/main/main-routing.module';
 import {CommonModule} from '@angular/common';
 import {SharedModule} from '@app/shared/shared.module';
 import { CategoryAddComponent } from './components/category-add/category-add.component';
+import { CategoryListComponent } from './components/category-list/category-list.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     MainComponent,
     CategoryItemComponent,
-    CategoryAddComponent
+    CategoryListComponent,
+    CategoryAddComponent,
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     SharedModule.forRoot(),
     MainRoutingModule,
   ],
