@@ -19,6 +19,7 @@
         >
         <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
           <div *ngIf="f.title.errors.required">Title is required</div>
+          <div *ngIf="f.title.errors.test1">Title can not contain 'test'</div>
         </div>
       </div>
       <button class="btn btn-primary" type="submit" [disabled]="loading" >

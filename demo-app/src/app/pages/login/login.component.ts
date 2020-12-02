@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '@app/shared/auth';
+import {UsernameValidator} from '@app/shared/valitions/username.validator';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.required, UsernameValidator.cannotContainSpace]],
       password: ['', Validators.required]
     });
   }

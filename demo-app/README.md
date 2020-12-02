@@ -37,3 +37,6 @@ https://jasonwatmore.com/post/2020/07/09/angular-10-jwt-authentication-example-t
 https://jasonwatmore.com/post/2020/07/25/angular-10-jwt-authentication-with-refresh-tokens
 https://github.com/cornflourblue/angular-10-jwt-authentication-example
 
+https://jasonwatmore.com/post/2020/07/07/angular-10-reactive-forms-validation-example
+
+

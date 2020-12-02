@@ -5,6 +5,7 @@ import {first} from 'rxjs/operators';
 import {PriorityType} from '@app/shared/enum/priority-type.enum';
 import {Category} from '@app/shared/models';
 import {TodoService} from '@app/shared/services/todo.service';
+import {DemoValidator} from '@app/shared/valitions/demo.validator';
 
 @Component({
   selector: 'app-category-add',
