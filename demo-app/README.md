@@ -38,5 +38,5 @@ https://jasonwatmore.com/post/2020/07/25/angular-10-jwt-authentication-with-refr
 https://github.com/cornflourblue/angular-10-jwt-authentication-example
 
 https://jasonwatmore.com/post/2020/07/07/angular-10-reactive-forms-validation-example
-
+https://codeburst.io/setup-sonarqube-for-angular-application-locally-in-three-easy-steps-8f31e339ac19
 
