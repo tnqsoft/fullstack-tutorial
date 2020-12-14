@@ -131,8 +131,7 @@ class CreateUserCommand extends Command
         $this->validateUserData($email);
 
         // create the user and encode its password
-        $user = new User();
-        $user->setEmail($email);
+        $user = new User($email);
 
         // See https://symfony.com/doc/current/security.html#c-encoding-passwords
         $encodedPassword = $this->passwordEncoder->encodePassword($user, $plainPassword);
