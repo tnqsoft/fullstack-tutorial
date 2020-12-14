@@ -42,3 +42,11 @@ https://symfonycasts.com/screencast/api-platform/swagger#play
  https://github.com/api-platform/api-platform/issues/199
  https://github.com/api-platform/api-platform/issues/1202
  https://api-platform.com/docs/core/serialization/#using-serialization-groups
+
+Selecting a Different PHP Version¶
+If you have multiple PHP versions installed on your computer, you can tell Symfony which one to use creating a file called .php-version at the project root directory:
+cd my-project/
+echo 7.2 > .php-version
+echo 7 > .php-version
+
+symfony local:php:list

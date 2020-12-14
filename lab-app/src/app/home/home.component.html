@@ -1,0 +1,22 @@
+<p>home works!</p>
+
+<p>Hello {{name}}!</p>
+<p><input [(ngModel)]="name"></p>
+
+<p>Age: {{age}}</p>
+<p><input [ngModel]="age" (ngModelChange)="age=$event"></p>
+
+<hr/>
+
+<app-demo1 [(count)]="number1">Number 1:</app-demo1>
+<app-demo1 [count]="number2" (countChange)="number2=$event">Number 2:</app-demo1>
+<app-demo1 [count]="number3" (countChange)="onCountChanged($event)">Number 3:</app-demo1>
+<ul>
+  <li> number1: {{number1}} </li>
+  <li> number2: {{number2}} </li>
+  <li> number3: {{number3}} </li>
+  <li> number4: {{number4}} </li>
+</ul>
+
+<hr/>
+<a [routerLink]="'demo3'">Demo 3 lazy load</a>

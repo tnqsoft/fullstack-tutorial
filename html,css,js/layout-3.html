@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix {
+            border: 2px dashed #0000ff;
+        }
+        .column {
+            border: 1px solid #ff43bb;
+            padding: 30px;
+            /*box-sizing: border-box;*/
+        }
+        .column-left {
+            width: 200px;
+            float: left;
+            /*margin: 30px;*/
+        }
+        .column-right {
+            float: left;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        * html .clearfix             { zoom: 1; } /* IE6 */
+        *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+    </style>
+</head>
+<body>
+<div class="clearfix">
+    <div class="column column-left">Column Left</div>
+    <div class="column column-right">
+        Column Right
+    </div>
+</div>
+<p>The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings, and so on. The general reasoning behind this was discussed in a May 2007 post, if you're interested. Reset styles quite often appear in CSS frameworks, and the original "meyerweb reset" found its way into Blueprint, among others.</p>
+</body>
+</html>
